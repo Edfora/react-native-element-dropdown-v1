@@ -43,9 +43,9 @@ yarn add react-native-element-dropdown
 | data               | Array                                           | Yes       | Data is a plain array                                               |
 | labelField         | String                                          | Yes       | Extract the label from the data item                                |
 | valueField         | String                                          | Yes       | Extract the primary key from the data item                          |
-| searchField        | String                                          | No       | Specify the field of data list you want to search                   |
+| searchField        | String                                          | Yes       | Specify the field of data list you want to search                   |
 | onChange           | (item: object) => void                          | Yes       | Selection callback                                                  |
-| onChangeText       | (search: string) => void                        | No       | Callback that is called when the text input's text changes          |
+| onChangeText       | (search: string) => void                        | Yes       | Callback that is called when the text input's text changes          |
 | value              | Item                                            | No        | Set default value                                                   |
 | placeholder        | String                                          | No        | The string that will be rendered before dropdown has been selected  |
 | placeholderStyle   | TextStyle                                       | No        | Styling for text placeholder                                        |
@@ -98,9 +98,9 @@ yarn add react-native-element-dropdown
 | data               | Array                                                | Yes       | Data is a plain array                                               |
 | labelField         | String                                               | Yes       | Extract the label from the data item                                |
 | valueField         | String                                               | Yes       | Extract the primary key from the data item                          |
-| searchField        | String                                               | No       | Specify the field of data list you want to search                   |
+| searchField        | String                                               | Yes       | Specify the field of data list you want to search                   |
 | onChange           | (value[]) => void                                    | Yes       | Selection callback. A array containing the "valueField".            |
-| onChangeText       | (search: string) => void                             | No       | Callback that is called when the text input's text changes          |
+| onChangeText       | (search: string) => void                             | Yes       | Callback that is called when the text input's text changes          |
 | value              | Item[]                                               | No        | Set default value. A array containing the "valueField".             |
 | placeholder        | String                                               | No        | The string that will be rendered before dropdown has been selected  |
 | placeholderStyle   | TextStyle                                            | No        | Styling for text placeholder                                        |

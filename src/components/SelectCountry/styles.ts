@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
     flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
     padding: 6,
     alignItems: 'center',
+    justifyContent: 'center'
   },
   image: {
     width: 20,

@@ -473,9 +473,9 @@ const DropdownComponent: <T>(
             <View
               style={StyleSheet.flatten([
                 itemContainerStyle,
-                selected && {
-                  backgroundColor: activeColor,
-                },
+                // selected && {
+                //   backgroundColor: activeColor,
+                // },
               ])}
             >
               {renderItem ? (
