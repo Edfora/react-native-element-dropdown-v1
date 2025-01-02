@@ -40,16 +40,13 @@ const SelectCountryComponent: <T>(
     const _renderItem = (item: any) => {
       return (
         <View style={styles.item}>
-          <Image source={item[imageField]} style={[styles.image, imageStyle]} />
-          <Text style={[styles.selectedTextStyle, selectedTextStyle]}>
-            {item[labelField]}
-          </Text>
+          {item[imageField]()}
         </View>
       );
     };
 
     const selectItem: any = useMemo(() => {
-      const index = data.findIndex((e: any) => e[valueField] === value);
+      const index = data.findIndex((e: any) => e[valueField] === value[valueField]);
       return data[index];
     }, [data, valueField, value]);
 
@@ -59,13 +56,8 @@ const SelectCountryComponent: <T>(
         {...props}
         renderItem={_renderItem}
         renderLeftIcon={() => {
-          if (selectItem?.image) {
-            return (
-              <Image
-                source={selectItem.image}
-                style={[styles.image, imageStyle]}
-              />
-            );
+          if (selectItem?.imageField) {
+            return selectItem[imageField]()
           } else {
             return null;
           }

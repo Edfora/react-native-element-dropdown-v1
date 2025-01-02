@@ -500,10 +500,7 @@ const DropdownComponent: <T>(
           >
             <View
               style={StyleSheet.flatten([
-                itemContainerStyle,
-                selected && {
-                  backgroundColor: activeColor,
-                },
+                itemContainerStyle
               ])}
             >
               {renderItem ? (
@@ -568,8 +565,7 @@ const DropdownComponent: <T>(
                 }
                 onSearch(e);
               }}
-              placeholderTextColor={searchPlaceholderTextColor}
-              showIcon
+              placeholderTextColor="gray"
               iconStyle={[{ tintColor: iconColor }, iconStyle]}
             />
           );
@@ -646,7 +642,7 @@ const DropdownComponent: <T>(
             return bottom < keyboardHeight + height;
           }
 
-          return bottom < (search ? 150 : 100);
+          return bottom < (search ? 250 : 200);
         };
 
         if (width && top && bottom) {

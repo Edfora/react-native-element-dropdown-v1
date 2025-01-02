@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
     flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    height: 35
   },
   title: {
     marginVertical: 5,
